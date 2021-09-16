@@ -2,11 +2,21 @@ const fs = require("fs");
 const prettier = require("prettier");
 
 const SitemapGeneratedDate = new Date().toISOString();
-const CINEPS_BOARD_DOMAIN = "https://www.cineps.net/board";
+const CINEPS_BOARD_DOMAIN = "https://www.dofbridge.com";
 
 const formatting = (target) => prettier.format(target, { parser: "html" });
 
-let pages = ["/best", "talk", "/citic", "/campus", "/notice"];
+let pages = [
+  "/",
+  "/home",
+  "/auth",
+  "/project",
+  "/designers",
+  "/order",
+  "/store",
+  "/legal",
+  "/howto",
+];
 pages = pages.map((page) => CINEPS_BOARD_DOMAIN + page);
 
 // 웹의 페이지에 따라 반복적으로 넣을 loc, loastmod
