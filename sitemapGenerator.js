@@ -1,8 +1,8 @@
 const fs = require("fs");
 const prettier = require("prettier");
 
-const SitemapGeneratedDate = new Date().toISOString();
-const CINEPS_BOARD_DOMAIN = "https://www.dofbridge.com";
+const sitemapGeneratedDate = new Date().toISOString();
+const DOMAIN = "https://www.dofbridge.com";
 
 const formatting = (target) => prettier.format(target, { parser: "html" });
 
@@ -17,7 +17,7 @@ let pages = [
   "/legal",
   "/howto",
 ];
-pages = pages.map((page) => CINEPS_BOARD_DOMAIN + page);
+pages = pages.map((page) => DOMAIN + page);
 
 // 웹의 페이지에 따라 반복적으로 넣을 loc, loastmod
 const pageSitemap = pages
@@ -25,7 +25,7 @@ const pageSitemap = pages
     (page) => `
       <url>
         <loc>${page}</loc>
-        <lastmod>${SitemapGeneratedDate}</lastmod>
+        <lastmod>${sitemapGeneratedDate}</lastmod>
       </url>
     `
   )
