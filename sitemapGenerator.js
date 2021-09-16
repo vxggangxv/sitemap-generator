@@ -4,7 +4,7 @@ const prettier = require("prettier");
 const sitemapGeneratedDate = new Date().toISOString();
 const DOMAIN = "https://www.dofbridge.com";
 
-const formatting = (target) => prettier.format(target, { parser: "html" });
+const formatSitemap = (target) => prettier.format(target, { parser: "html" });
 
 let pages = [
   "/",
@@ -41,6 +41,6 @@ const generateSitemap = `
           ${pageSitemap}
         </urlset>`;
 
-const formattedSitemap = formatting(geneateSitemap);
+const formattedSitemap = formatSitemap(geneateSitemap);
 
 fs.writeFileSync("./sitemap.xml", formattedSitemap, "utf8");
