@@ -1,0 +1,28 @@
+{
+  "name": "sitemap-generator",
+  "version": "1.0.0",
+  "description": "auto sitemap generator",
+  "main": "sitemapGenerator.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "prettier": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vxggangxv/sitemap-generator.git"
+  },
+  "keywords": [
+    "sitemap",
+    "generator"
+  ],
+  "author": "vxggangxv@naver.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vxggangxv/sitemap-generator/issues"
+  },
+  "homepage": "https://github.com/vxggangxv/sitemap-generator#readme"
+}
